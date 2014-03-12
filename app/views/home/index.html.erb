@@ -1,0 +1,497 @@
+ <style>
+body {
+		background-color:  rgba(230, 230, 230 ,0.8);}
+
+.text{
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	/*font-family: 'Droid Sans', sans-serif;*/
+	color: #444444;}
+
+.top {
+	background: rgba(200, 200, 200, 0.8);
+	/*background: linear-gradient(top, #4f5964 0%, #200000 100%);
+	background: -moz-linear-gradient(top, #4f5964 0%, #200000 100%);
+	background: -webkit-linear-gradient(top, #4f5964 0%,#200000 100%);*/
+	border: 2px solid #ffffff;
+	-webkit-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	/*and give the corners a small curve*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	padding-left: 10%;
+    }
+
+.top2 {
+	border: 2px solid #fff;
+	-webkit-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	/*and give the corners a small curve*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	padding: 20px;
+	float: left;
+	width: 25%;
+	height:560px;
+	margin: 5px 5px 0px 5px;
+    background-color: rgb(230, 230, 230 );
+    overflow:-moz-scrollbars-vertical;
+	overflow-y:auto;}
+
+.top3 {
+	border: 2px solid #fff;
+	-webkit-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	/*and give the corners a small curve*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	padding: 20px;
+	float: left;
+	width: 35%;
+	height: 560px;
+	margin: 5px 5px 0px 0px;
+    background-color: rgb(255, 255, 255);
+	overflow:-moz-scrollbars-vertical;
+	overflow-y:auto;}
+
+.top4 {
+	border: 2px solid #fff;
+	-webkit-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	/*and give the corners a small curve*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	padding: 20px;
+	float: left;
+	width: 28.3%;
+	height: 560px;
+	margin: 5px 0px 0px 0px;
+    background-color:rgba(230, 230, 230 ,0.8);
+	overflow:-moz-scrollbars-vertical;
+	overflow-y:auto;}
+
+.top5 {
+	border: 2px solid #ccc;
+	/*and give the corners a small curve*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	margin-top: 15px;
+	padding: 15px 10px 15px 15px;
+    background-color:rgb(230, 200, 200 );}
+.top5:hover{
+	box-shadow: inset 0 0 0 4px #666666, 0 0 1px rgba(0, 0, 0, 0);} 
+
+.top6 {
+	padding-left: 40%;
+	padding-top: 10%; 
+    }
+
+.list-all{
+	height: 120px;
+	overflow:-moz-scrollbars-vertical;
+	overflow-y:auto;
+	border: 2px solid #000;
+	padding:0px 20px 0px 20px;}
+
+.add-frnd{
+
+	}
+/* Border Fade 
+.border-fade {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px rgba(0, 0, 0, 0);
+  /* Hack to improve aliasing on mobile/tablet devices 
+}
+
+.border-fade:hover {
+  box-shadow: inset 0 0 0 4px #666666, 0 0 1px rgba(0, 0, 0, 0);
+  /* Hack to improve aliasing on mobile/tablet devices 
+}*/
+
+
+/* Pulse Grow */
+
+@-webkit-keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.pulse-grow {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.pulse-grow:hover {
+  -webkit-animation-name: pulse-grow;
+  animation-name: pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Float Shadow */
+
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.float-shadow:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+
+.float-shadow:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+/* Buzz Out */
+
+@-webkit-keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    -ms-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    -ms-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    -ms-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    -ms-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    -ms-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    -ms-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    -ms-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    -ms-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    -ms-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    -ms-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.buzz-out {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.buzz-out:hover {
+  -webkit-animation-name: buzz-out;
+  animation-name: buzz-out;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Grow */
+
+.grow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+ </style>
+
+<div class="top">
+<table>
+<tr><td style="padding:0px 0px 0px 220px;">
+<h2 class="text">Welcome to Billsplit</h2>
+</td><td style="padding:0px 0px 0px 200px;">
+
+	    Signed in as <b><%= current_user.username.capitalize %></b>
+	<span style="padding:0px 0px 0px 40px;"><%= link_to "Sign out", destroy_user_session_path , :method => :delete , :class=> "btn btn-danger buzz-out"%>
+	</span>
+</td></tr>
+</table>
+</div>
+
+<div>
+<!--==================================================================================================-->
+<!--<div style="float:left;width: 27%;">-->
+<div class="top2">
+	<div>
+		<% @notmygroup.each do |f| %>
+		<br/>Join:  <%=link_to f.groupname.capitalize, home_addtogroup_path(:id => f.id) %>
+		<% end %>
+	<div class="top5">
+	<table>
+	    <%= form_tag(home_share_path, method: "get") do %>
+	    <tr><td>
+	 	<b>Bill:</b>
+	 	</td><td>
+	 	<%= text_field_tag(:q,'',:placeholder=>"0.00 $") %>
+	 	</td></tr>
+	 	<tr><td>
+	 	<b>Desc:</b>
+	 	</td><td>
+	 	<%= text_field_tag(:r,'',:placeholder=>"Enter a description") %>
+	 	</td></tr>
+	 	<tr><td>
+	 	<b>Group:</b>
+	 	</td><td>
+	 	<%= select_tag "group_id", options_from_collection_for_select(current_user.groups, "id", "groupname")%>	
+	 	</td></tr>
+	 	<tr><td>
+		<%= submit_tag "Share" ,:class=> "btn btn-primary grow"%>
+		</td></tr>
+		<% end %>
+	</table>
+	</div>
+	</div>
+		<br/><br/>
+		<b style = "color: #098776;">Create New Group</b>
+		<%= form_tag(home_newgroup_path, method: "get") do %>
+		<%= text_field_tag(:p,'',:placeholder=>"Group Name") %>
+		<br/>
+		<%= submit_tag "Create" ,:class=> "btn btn-success grow" %>
+		<% end %>
+</div>
+<!--==================================================================================================-->
+<!--<div style="float:left;width: 45%;background-color: rgb(255, 255, 255);padding:20px">-->
+<div class="top3">
+			<% @group.each do |g| %>
+			<%if current_user.groups.find_by_id(g.id) %>
+				<i class=" icon-circle-arrow-down"></i>&nbsp<b><%=g.groupname.capitalize%></b><br/>
+				<div class="list-all">
+				<table class="table table table-condensed">
+					<% Reason.find_all_by_group_id(g.id).each do |h| %>
+					<tr><td>
+
+					<%if h.spender_name == "0"%>
+					<span><i class="icon-user"></i>&nbsp&nbsp<%="On #{h.created_at.strftime("%d-%m-%Y")},"%><b style="color:#292"> <%="#{h.reason_text.split.first.capitalize}"%></b><%=" Joined the group."%></span>
+					<%else%>
+					<span><i class="icon-shopping-cart"></i>&nbsp&nbsp<%="On #{h.created_at.strftime("%d-%m-%Y")},"%><b style="color:#e44"> <%=" #{h.spender_name.split.first.capitalize}"%></b><%=" spend #{number_to_currency(h.value)} for #{h.reason_text}."%></span>
+					<%end%>
+
+					</td></tr>
+					<%end%>
+				</table>
+				</div>
+				<br/>
+			<%end%>
+			<%end%>
+</div>
+<!--==================================================================================================-->
+<!--<div style="float:right;width: 20%;">-->
+<div class="top4">
+			<% @group.each do |g| %>
+			
+					<%if current_user.groups.find_by_id(g.id) %>
+						<i class="icon-ok-sign"></i>&nbsp
+						<%color="#000"%>
+					<%else%>
+						<%color="#aaa"%>
+					<%end%>
+			<b style="color: <%=color%>"><%=g.groupname.capitalize%></b>
+			<div style="height: 120px;overflow:-moz-scrollbars-vertical;overflow-y:auto;border: 2px solid <%=color%>;padding:0px 20px 0px 20px;">
+			<table class="table table-condensed table-hover">
+				
+				<% GroupsUsers.find_all_by_group_id(g.id).each do |h| %>	
+				<%if h.user_id != current_user.id%>
+				<tr><td>
+					<i class="icon-user"></i>&nbsp<%=User.find_by_id(h.user_id).username.split.first.capitalize%> 
+				</td><td>	
+						<% Transfer.find_all_by_group_id(g.id).each do |i| %>
+				
+							<% if i.user_from == current_user.id && i.user_to == h.user_id%>
+								<%if i.value >= 0%>
+								<font style="color: #1122bb;font-size:80%;"> owes you </font><b style="color: #1122bb;"><%="#{number_to_currency(i.value)}" %></b>
+								<%else%>
+								<font style="color: #11bb11;font-size:80%;"> lend you </font><b style="color: #11bb11;"><%="#{number_to_currency(i.value * -1)}" %></b>
+								<%end%>
+							<% elsif i.user_from == h.user_id && i.user_to == current_user.id%>
+								<%if i.value < 0%>
+								<font style="color: #1122bb;font-size:80%;"> owes you </font><b style="color: #1122bb;"><%="#{number_to_currency(i.value * -1)}" %></b>
+								<%else%>
+								<font style="color: #11bb11;font-size:80%;"> lend you </font><b style="color: #11bb11;"><%="#{number_to_currency(i.value )}" %></b>
+								<%end%>
+							<%end%>
+						<%end%>
+				</td></tr>
+				<%end%>
+				<%end%> 
+			</table>
+			</div>
+			<br/>
+			<%end%>
+</div>
+<!--==================================================================================================-->			
+</div>			
+
+

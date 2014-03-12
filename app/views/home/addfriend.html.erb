@@ -1,0 +1,18 @@
+<h1>helloo there</h1>
+<%= link_to "Sign out", destroy_user_session_path , :method => :delete %>  	
+<%= link_to "back", root_path %>
+
+<%= form_for(@friend) do |f| %>
+<table>
+<tr>
+<td><b>friend Name</b></td>
+<td><%= f.text_field :username %></td>
+<td><b>Email</b></td>
+<td><%= f.text_field :email %></td>
+</tr>
+</table>
+<br/>
+<div class="actions" >
+<%= f.submit :value => "create" %>
+</div>
+<% end %> 

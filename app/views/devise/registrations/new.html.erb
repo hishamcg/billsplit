@@ -1,0 +1,23 @@
+<div style="padding:20px 100px;border: 2px solid #aaa;float:left;margin:20px 400px">
+<h2 style="padding-left:40px">Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div>
+  <%= f.text_field :username ,:autofocus => true ,:placeholder=>"User name"%></div>
+
+  <div>
+  <%= f.email_field :email ,:placeholder=>"Email address"%></div>
+
+  <div>
+  <%= f.password_field :password ,:placeholder=>"password"%></div>
+
+  <div>
+  <%= f.password_field :password_confirmation ,:placeholder=>"confirmation password"%></div>
+  <br/>
+  <div><%= f.submit "Sign up" ,:class=> "btn btn-primary"%>
+<% end %>
+<span style="padding-left: 70px">
+<%= render "devise/shared/links"%></span></div>
+</div>

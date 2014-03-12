@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  from: 1
+  to: 1
+  value: 1
+
+two:
+  from: 1
+  to: 1
+  value: 1

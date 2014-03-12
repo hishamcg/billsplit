@@ -1,0 +1,198 @@
+
+<style>
+body {
+		background-color:  rgba(230, 230, 230 ,0.8);}
+
+.text{
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	/*font-family: 'Droid Sans', sans-serif;*/
+	color: #444444;}
+
+.top {
+	background: rgb(200,200,200);
+	/*background: linear-gradient(top, #4f5964 0%, #200000 100%);
+	background: -moz-linear-gradient(top, #4f5964 0%, #200000 100%);
+	background: -webkit-linear-gradient(top, #4f5964 0%,#200000 100%);*/
+	border: 2px solid #ffffff;
+	-webkit-box-shadow: 0 0 6px rgb(30, 30, 30);
+	-moz-box-shadow: 0 0 6px rgb(30, 30, 30);
+	box-shadow: 0 0 6px rgb(30, 30, 30);
+	/*and give the corners a small curve*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	padding-left: 10%;
+	position:relative;
+	z-index: 50;
+    }
+.top2{
+	padding:4px 88px;
+}
+.top3{
+  padding:4px 35px;
+}
+.top6 {
+	padding-left: 40%;
+	padding-top: 10%; 
+    }
+
+.slid{
+	background:#D6D3DE;
+	border: 2px solid #ffffff;
+	-webkit-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	-moz-box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	box-shadow: 0 0 6px rgba(30, 30, 30, .75);
+	/*and give the corners a small curve*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px; 
+	padding:20px 60px 0px 60px;
+	float:right; 
+	position:relative;
+	right:55px;
+	top:-170px;
+	
+	-webkit-transition:all 1s ease;
+  -moz-transition:all 1s ease;
+	}
+
+.slid .top2{
+  padding:4px 35px;
+  margin-left: 50px;
+  -webkit-transition:all 1s ease;
+  -moz-transition:all 1s ease;
+  }
+.slid:hover{
+    top:-10px;
+  }
+
+.slid:hover .top2{
+  padding:4px 88px;
+  margin-left: 0px;
+  }
+
+
+/* Pulse Grow */
+
+@-webkit-keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.pulse-grow {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.pulse-grow:hover {
+  -webkit-animation-name: pulse-grow;
+  animation-name: pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Float Shadow */
+
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.float-shadow:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+
+.float-shadow:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+ </style>
+
+<div class="top">
+<table>
+<tr><td style="padding:0px 0px 0px 280px;">
+<h2 class="text">Welcome to BillSplit</h2>
+</td><td style="padding:0px 0px 0px 220px;">
+		
+
+
+<%= link_to "Sign up", new_user_registration_path ,:class=> "btn btn-primary float-shadow top3" %>
+</td></tr>
+</table>
+</div>
+
+	<div tabindex="-1" class="slid">
+		<h2 style="padding-left:44px">Sign in</h2>
+
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<div>
+		<%= f.email_field :email, :autofocus => true ,:placeholder=>"Email address"%></div>
+
+		<div>
+		<%= f.password_field :password  ,:placeholder=>"password"%></div>
+
+		<!--   <% if devise_mapping.rememberable? -%>
+		  <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+		  <% end -%> -->
+		<br/>
+		<div><%= f.submit "Sign in", class: "btn btn-success top2"%>
+		<% end %>
+		</div>
+	</div>
+	
+
+<div class="top6">
+<img src="/assets/heart2.png" alt="Smiley face" width="200px" class="pulse-grow">
+</div>
